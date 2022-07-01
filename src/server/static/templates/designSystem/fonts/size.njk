@@ -1,0 +1,41 @@
+{% extends "layout/designSystem/default.njk" %}
+{% block DesignSystemTitle%}
+  <div>
+    Fonts - Size
+  </div>
+{% endblock %}
+
+{% block DesignSystemDescription %}
+  <span>Font size is important for focusing users attension.</span>
+{% endblock %}
+
+{% block DesignSystemContent %}
+  <div style="font-size:1.6em; margin-bottom:16px;">Default Unit</div>
+  <div> We use <span style="color:#5a8fc4;font-weight:700;">"em"</span> font scale. </div>
+
+  <div style="font-size:1.6em; margin-top:16px; margin-bottom:16px;">Font Size Level</div>
+  <div> <span style="font-size:1.2em; font-weight:bold;">Level 1</span> font-size: .9em; </div>
+  <div> <span style="font-size:1.2em; font-weight:bold;">Level 2</span> font-size: 1em; </div>
+  <div> <span style="font-size:1.2em; font-weight:bold;">Level 3</span> font-size: 1.2em; </div>
+  <div> <span style="font-size:1.2em; font-weight:bold;">Level 4</span> font-size: 1.4em; font-weight:300; </div>
+  <div> <span style="font-size:1.2em; font-weight:bold;">Level 5</span> font-size: 1.6em; font-weight:300; </div>
+
+  <div style="font-size:1.6em; margin-top:16px; margin-bottom:16px;">Examples</div>
+  <div style="display:flex; flex-direction:column; gap:16px;">
+    <div style="font-size:.9em;">
+      Level 1 Example.
+    </div>
+    <div style="font-size:1em;">
+      Level 2 Example.
+    </div>
+    <div style="font-size:1.2em;">
+      Level 3 Example.
+    </div>
+    <div style="font-size:1.4em; font-weight: 300;">
+      Level 4 Example.
+    </div>
+    <div style="font-size:1.6em; font-weight:300;">
+      Level 5 Example.
+    </div>
+  </div>
+{% endblock %}

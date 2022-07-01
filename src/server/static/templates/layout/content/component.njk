@@ -1,0 +1,59 @@
+{% extends "index.njk"%}
+
+{% block Content %}
+  <div>
+    <div style="display:flex; flex-direction:column;">
+      <span style="font-size:2em;"> Components </span> 
+      <div style="font-size:1.8em; margin-left:16px; ">{% block ComponentTitle1 %}{% endblock %}</div>
+      <div style="font-size:1.6em; margin-left:24px; ">{% block ComponentTitle2 %}{% endblock %}</div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; padding-top:32px; min-height:150px;">
+      <span style="margin-bottom:16px; font-size:.9em;">Preview</span>
+      <div style="padding-left:16px; max-width:1080px;">
+        {% block Component %}  
+        {% endblock %}
+      </div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; padding-top:32px; min-height:150px;">
+      <span style="margin-bottom:16px; font-size:.9em;">Description</span>
+      <div style="padding-left:16px;">
+        {% block ComponentDescription %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; padding-top:32px;">
+      <span style="margin-bottom:16px; font-size:.9em;">Example</span>
+      <div style="padding-left:16px;">
+        {% block ComponentExample %}
+        {% endblock %}
+      </div>
+    </div>
+
+    {% block ComponentAttribute %}
+    {% endblock %}
+
+  </div>
+  <script src="/static/js/lib/highlightjs/highlight.min.js"></script>
+  <link rel="stylesheet" href="/static/js/lib/highlightjs/styles/default.min.css">
+  <script>
+    const codes = document.querySelectorAll('code');
+    for(const code of codes) {
+      hljs.highlightBlock(code);
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <style>
+    code {
+      font-family: 'Ubuntu Mono', monospace;
+    }
+    .file-name {
+      font-family: 'Ubuntu Mono', monospace;
+    }
+  </style>
+{% endblock %}

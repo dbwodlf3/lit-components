@@ -1,0 +1,22 @@
+{% extends "index.njk"%}
+
+{% block Content %}
+  <div style="font-size:2em; margin-bottom:50px;">
+    {% block DesignSystemTitle %}
+    {% endblock %}
+  </div>
+
+  {# <div style="border: 1px solid rgba(0, 0, 0, .12); padding: 10px 5px 10px 5px; background: #fefefe; max-width:1080px"> #}
+    <div style="display:flex; flex-direction:column;">
+      <span style="font-size: 1.6em; margin-bottom:16px;"> Description </span>
+      {% block DesignSystemDescription %}    
+      
+      {% endblock %}
+    </div>
+  {# </div> #}
+
+  <div style="margin-top:40px; font-size:.9em;">
+    {% block DesignSystemContent %}
+    {% endblock %}
+  </div>
+{% endblock %}

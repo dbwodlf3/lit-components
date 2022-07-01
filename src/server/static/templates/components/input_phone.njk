@@ -1,0 +1,40 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Input </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div> Phone </div> 
+{% endblock %}
+
+{% block Component %}
+  <input-phone id="PhoneInput">/>
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a phone input component.
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "language-html" %}
+  {% set code = '
+  <input-phone id="PhoneInput">/>
+  <script>
+    const phone_input = document.getElementById("PhoneInput");
+    phone_input.addEventListener("click", ()=>{
+      window.alert(phone_input.value);
+    });
+  </script>
+  ' %}
+  {% include "includes/components/example.njk" %}
+
+  <script>
+    const phone_input = document.getElementById("PhoneInput");
+    phone_input.addEventListener("click", ()=>{
+      window.alert(phone_input.value);
+    });
+  </script>
+{% endblock %}

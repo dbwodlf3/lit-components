@@ -1,0 +1,31 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Modal </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div> Default Modal </div> 
+{% endblock %}
+
+{% block Component %}
+  <modal-component buttonName="Open Modal" titleName="Modal">
+    <div>This is a Default Modal.</div>
+  </modal-component>
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a button component.
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "language-html" %}
+  {% set code = '
+  <modal-component buttonName="Open Modal" titleName="Modal">
+    <div>This is a Default Modal.</div>
+  </modal-component>
+  ' %}
+  {% include "includes/components/example.njk" %}
+{% endblock %}

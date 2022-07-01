@@ -1,0 +1,27 @@
+{% extends "layout/designSystem/examples.njk" %}
+{% block DesignSystemTitle%}
+  <div>
+    Grid System - Examples
+  </div>
+{% endblock %}
+
+{% block DesignSystemContent %}
+<div style="font-size:1.6em; margin-top:16px; margin-bottom:16px;">Login Form</div>
+  <div style="display:inline-block; padding: 18px 36px 18px 36px; border: 1px solid rgba(0, 0, 0, .12);">
+
+    <div style="display:flex; justify-content:center; margin-bottom:40px;">
+      <img style="border-radius:50%;" src="http://via.placeholder.com/128x128">
+    </div>
+
+    <div style="font-size:.9em">Username</div>
+    <input style="margin-top: 8px; margin-bottom:16px; border:none; border-bottom: 1px solid black; outline:none;" type="text">
+
+    <div style="font-size:.9em">Password</div>
+    <input style="margin-top: 8px; margin-bottom:8px; border:none; border-bottom: 1px solid black; outline:none;" type="password">
+
+    <div style="display: flex; justify-content:center; margin-top:16px; cursor:pointer;"> 
+      <div style="font-size:.9em; padding: 8px 16px 8px 16px; border: 1px solid rgba(0, 0, 0, .12); ">SUBMIT</div>
+    </div>
+
+  </div>
+{% endblock %}

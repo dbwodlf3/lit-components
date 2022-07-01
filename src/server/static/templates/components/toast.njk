@@ -1,0 +1,42 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Modal </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div> Toast </div> 
+{% endblock %}
+
+{% block Component %}
+  <toast-component position="top-right"></toast-component>
+  <button-component id="ButtonExample" label="Click Me"></button-component>
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a Toast component.
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "language-html" %}
+  {% set code = '
+  <toast-component position="top-right"></toast-component>
+  <button-component id="ButtonExample" label="Click Me"></button-component>
+  <script>
+    const button = document.getElementById("ButtonExample");
+    button.addEventListener("click", ()=>{
+      window.dispatchEvent(new CustomEvent("toast_message", {detail: {type: "success", text: "Toast!"}}));
+    });
+  </script>
+  ' %}
+  {% include "includes/components/example.njk" %}
+
+<script>
+  const button = document.getElementById("ButtonExample");
+  button.addEventListener("click", ()=>{
+    window.dispatchEvent(new CustomEvent("toast_message", {detail: {type: "success", text: "Toast!"}}));
+  });
+</script>
+{% endblock %}

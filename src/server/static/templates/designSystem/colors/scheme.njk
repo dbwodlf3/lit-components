@@ -1,0 +1,65 @@
+{% extends "layout/designSystem/default.njk" %}
+{% block DesignSystemTitle%}
+  <div>
+    Colors - Scheme 
+  </div>
+{% endblock %}
+
+{% block DesignSystemDescription %}
+  <span>Color is used for background and font color. There are two color scheme, gray scale and theme color.</span>
+{% endblock %}
+
+{% block DesignSystemContent %}
+  <div style="font-size:1.6em; margin-bottom:16px;">Gray Scale</div>
+    <div style="font-size: 1.4em; margin-bottom;8px;"><a href="#FontColors" class="a-none">Font Colors</a> </div>
+    <div style="display:flex; align-items:center;">
+      <span style="display:inline-block; width:50px;height:50px; background:#000; margin-top:8px;"></span><span style="margin-left:8px; color:#000;">#000 Default Black Color.</span>
+    </div>
+    <div style="display:flex; align-items:center;">
+      <span style="display:inline-block; width:50px;height:50px; background:#222; margin-top:8px;"></span><span style="margin-left:8px; color:#222;">#222 Article Color.</span>
+    </div>
+    <div style="display:flex; align-items:center;">
+      <span style="display:inline-block; width:50px;height:50px; background:#4a4a4a; margin-top:8px;"></span><span style="margin-left:8px; color:#4a4a4a;">#4a4a4a Option Color.</span>
+    </div>
+    <div style="display:flex; align-items:center;">
+      <span style="display:inline-block; width:50px;height:50px; background:#6a6a6a; margin-top:8px;"></span><span style="margin-left:8px; color:#6a6a6a;">#666 Option 2 Color.</span>
+    </div>
+          
+    <div style="font-size: 1.4em; margin-bottom;8px; margin-top: 16px;"><a href="#BorderColors" class="a-none">Border Colors</a></div>
+    <div style="display:flex; align-items:center; margin-top:8px">
+      <span style="display:inline-block; width:50px;height:50px; border:1px solid #afafaf"></span><span style="margin-left:8px;">#afafaf Default Border Color 1 </span>
+    </div>
+    <div style="display:flex; align-items:center; margin-top:8px">
+      <span style="display:inline-block; width:50px;height:50px; border:1px solid #cfcfcf"></span><span style="margin-left:8px;">#cfcfcf Default Border Color 2 </span>
+    </div>
+    <div style="display:flex; align-items:center; margin-top:8px">
+      <span style="display:inline-block; width:50px;height:50px; border:1px solid #dfdfdf"></span><span style="margin-left:8px;">#dfdfdf Default Border Color 3</span>
+    </div>
+    <div style="display:flex; align-items:center; margin-top:8px">
+      <span style="display:inline-block; width:50px;height:50px; border:1px solid #efefef"></span><span style="margin-left:8px;">#efefef Default Border Color 4 </span>
+    </div>
+
+
+
+    <div style="font-size: 1.4em; margin-bottom;8px; margin-top: 16px;"> <a href="#BorderColors" class="a-none">Background Colors</a> </div>
+    <div style="display:flex; align-items:center; margin-top:8px">
+      <span style="display:inline-block; width:50px;height:50px; background: #dfdfdf;"></span><span style="margin-left:8px;">#dfdfdf Default Background Color 1</span>
+    </div>
+    <div style="display:flex; align-items:center; margin-top:8px">
+      <span style="display:inline-block; width:50px;height:50px; background: #efefef"></span><span style="margin-left:8px;">#efefef Default Background Color 2 </span>
+    </div>
+    <div style="display:flex; align-items:center; margin-top:8px">
+      <span style="display:inline-block; width:50px;height:50px; background: #fafafa"></span><span style="margin-left:8px;">#fafafa Default Background Color 3 </span>
+    </div>
+    <div style="display:flex; align-items:center; margin-top:8px">
+      <span style="display:inline-block; width:50px;height:50px; background: #fff"></span><span style="margin-left:8px;">#fff Default Border Color 4 </span>
+    </div>
+
+  <div style="font-size:1.6em; margin-top: 32px; margin-bottom:16px;">Theme Color</div>
+    <div style="display:flex; align-items:center; margin-top:8px">
+      <span style="display:inline-block; width:50px;height:50px; background:#73B6F8"></span><span style="margin-left:8px; color:#73B6F8;">#73B6F8 Primary Color </span>
+    </div>
+    <div style="display:flex; align-items:center; margin-top:8px">
+      <span style="display:inline-block; width:50px;height:50px; background:#F8B573"></span><span style="margin-left:8px; color:#F8B573;">#F8B573 Secondary Color </span>
+    </div>
+{% endblock %}

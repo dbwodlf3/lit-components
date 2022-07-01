@@ -1,0 +1,27 @@
+{# 
+  SET filename
+  SET language
+  SET code
+ #}
+
+<div style="display:flex; flex-direction:column; position:relative;">
+  <div style="display:flex; flex-grow:1; max-width:1080px;">
+
+    <div style=" box-sizing:border-box;position:absolute;
+        display:flex; align-items:center;
+        height:30px; padding: 8px 8px 8px 8px;
+        border:1px solid rgba(0,0,0,.12); background:#fff;
+    ">
+        <span class="file-name" style="font-size:.9em;"> {{filename}}
+        </span>
+    </div>
+
+    <pre style="margin-top:0px; box-sizing:border-box; flex-grow:1;">
+      <code class="{{language}}" style="
+      padding-top:16px; box-sizing:border-box;
+      border:1px solid rgba(0,0,0,.12); background:#fafafa;
+      font-size:1em; 
+      ">{{code}}</code>
+    </pre>
+  </div>
+</div>

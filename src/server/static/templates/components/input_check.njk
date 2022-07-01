@@ -1,0 +1,44 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Input </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div> Check </div> 
+{% endblock %}
+
+{% block Component %}
+  <div style="display:flex; align-items:center;">
+    <input-check id="CheckInput"></input-check> <div>Todo 1</div>
+  </div>
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a button component.
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "language-html" %}
+  {% set code = '
+  <div style="display:flex; align-items:center;">
+    <input-check id="CheckInput"></input-check> <div>허어~</div>
+  </div>
+  <script>
+    const check_box = document.getElementById("CheckInput");
+    check_box.addEventListener("click", ()=>{
+      window.alert(check_box.value);
+    });
+  </script>
+  ' %}
+  {% include "includes/components/example.njk" %}
+
+<script>
+  const check_box = document.getElementById("CheckInput");
+  check_box.addEventListener("click", ()=>{
+    window.alert(check_box.value);
+  });
+</script>
+{% endblock %}

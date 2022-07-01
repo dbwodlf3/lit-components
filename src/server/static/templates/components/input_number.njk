@@ -1,0 +1,44 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Input </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div> Number </div> 
+{% endblock %}
+
+{% block Component %}
+  <div style="width:200px;">
+    <input-number id="NumberInput" unit="$" />
+  </div>
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a number input component.
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "language-html" %}
+  {% set code = '
+  <div style="width:200px;">
+    <input-number id="NumberInput" unit="$" />
+  </div>
+  <script>
+    const button = document.getElementById("NumberInput");
+    button.addEventListener("click", ()=>{
+      window.alert("Clicked.");
+    });
+  </script>
+  ' %}
+  {% include "includes/components/example.njk" %}
+
+<script>
+  const number_input = document.getElementById("NumberInput");
+  number_input.addEventListener("keyup", (e)=>{
+    window.alert(e.currentTarget.value);
+  });
+</script>
+{% endblock %}

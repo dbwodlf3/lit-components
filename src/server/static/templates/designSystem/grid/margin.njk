@@ -1,0 +1,76 @@
+{% extends "layout/designSystem/default.njk" %}
+{% block DesignSystemTitle%}
+  <div>
+    Grid System - Margin
+  </div>
+{% endblock %}
+
+{% block DesignSystemDescription %}
+  <span>Margin is usually used for white space between Components. Don't use this is for getting gap between border and inner content. </span>
+{% endblock %}
+
+{% block DesignSystemContent %}
+  <div style="font-size:1.6em; margin-bottom:16px;">Default Unit</div>
+  <div> We use 8pt grid system. Default margin between components is 8px. </div>
+
+  <div style="font-size:1.6em; margin-top:16px; margin-bottom:16px;">Margin Level</div>
+  <div> <span style="font-size:1.2em; font-weight:bold;">Level 1</span> margin: 8px; </div>
+  <div> <span style="font-size:1.2em; font-weight:bold;">Level 2</span> margin: 16px; </div>
+  <div> <span style="font-size:1.2em; font-weight:bold;">Level 3</span> margin: 24px; </div>
+  <div> <span style="font-size:1.2em; font-weight:bold;">Level 4</span> margin: 32px; </div>
+  <div> <span style="font-size:1.2em; font-weight:bold;">Level 5</span> margin: 40px; </div>
+
+  <div style="font-size:1.6em; margin-top:16px; margin-bottom:16px;">Examples</div>
+  <div style="display:flex; flex-direction:column; gap:16px;">
+    <div style="border:1px solid black; max-width:680px; padding: 4px 8px 4px 8px; font-size:.9em; box-sizing:border-box;">
+      <div>
+        <div style="border:1px solid black; margin-bottom: 8px; display:inline-block; padding: 4px 8px 4px 8px;"> Level 1 Example</div>
+        <div style="border:1px solid black; margin-left: 8px; margin-bottom:8px; display:inline-block; padding: 4px 8px 4px 8px;"> Level 1 Example</div>
+      </div>
+      <div>
+        <div style="border:1px solid black; display:inline-block; padding: 4px 8px 4px 8px;"> Level 1 Example</div>
+        <div style="border:1px solid black; margin-left: 8px; display:inline-block; padding: 4px 8px 4px 8px;"> Level 1 Example</div>
+      </div>
+    </div>
+    <div style="border:1px solid black; max-width:680px; padding: 8px 16px 8px 16px; font-size:1em; box-sizing:border-box;">
+      <div>
+        <div style="border:1px solid black; margin-bottom: 16px; display:inline-block; padding: 8px 16px 8px 16px;"> Level 2 Example</div>
+        <div style="border:1px solid black; margin-left: 16px; margin-bottom:16px; display:inline-block; padding: 8px 16px 8px 16px;"> Level 2 Example</div>
+      </div>
+      <div>
+        <div style="border:1px solid black; display:inline-block; padding: 8px 16px 8px 16px;"> Level 2 Example</div>
+        <div style="border:1px solid black; margin-left: 16px;  display:inline-block; padding: 8px 16px 8px 16px;"> Level 2 Example</div>
+      </div>
+    </div>
+    <div style="border:1px solid black; max-width:680px; padding: 12px 24px 12px 24px; font-size:1.2em; box-sizing:border-box;">
+      <div>
+        <div style="border:1px solid black; margin-bottom: 24px; display:inline-block; padding: 12px 24px 12px 24px"> Level 3 Example</div>
+        <div style="border:1px solid black; margin-left: 24px; margin-bottom:24px; display:inline-block; padding: 12px 24px 12px 24px"> Level 3 Example</div>
+      </div>
+      <div>
+        <div style="border:1px solid black; display:inline-block; padding: 12px 24px 12px 24px"> Level 3 Example</div>
+        <div style="border:1px solid black; margin-left: 24px;  display:inline-block; padding: 12px 24px 12px 24px"> Level 3 Example</div>
+      </div>
+    </div>
+    <div style="border:1px solid black; max-width:680px; padding: 14px 32px 14px 32px; font-size:1.4em; font-weight:300; box-sizing:border-box;">
+      <div>
+        <div style="border:1px solid black; margin-bottom: 32px; display:inline-block; padding: 14px 32px 14px 32px;"> Level 4 Example</div>
+        <div style="border:1px solid black; margin-left: 32; margin-bottom:32px; display:inline-block; padding: 14px 32px 14px 32px;"> Level 4 Example</div>
+      </div>
+      <div>
+        <div style="border:1px solid black; display:inline-block; padding: 14px 32px 14px 32px;"> Level 4 Example</div>
+        <div style="border:1px solid black; margin-left: 32px;  display:inline-block; padding: 14px 32px 14px 32px;"> Level 4 Example</div>
+      </div>
+    </div>
+    <div style="border:1px solid black; max-width:680px; padding: 18px 36px 18px 36px; font-size:1.6em; font-weight:300; box-sizing:border-box;">
+      <div>
+        <div style="border:1px solid black; margin-bottom: 40px; display:inline-block; padding: 18px 36px 18px 36px;"> Level 5 Example</div>
+        <div style="border:1px solid black; margin-left: 40px; margin-bottom:40px; display:inline-block; padding: 18px 36px 18px 36px;"> Level 5 Example</div>
+      </div>
+      <div>
+        <div style="border:1px solid black; display:inline-block; padding: 18px 36px 18px 36px;"> Level 5 Example</div>
+        <div style="border:1px solid black; margin-left: 40px;  display:inline-block; padding: 18px 36px 18px 36px;"> Level 5 Example</div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

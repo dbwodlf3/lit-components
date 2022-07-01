@@ -1,0 +1,40 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Input </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div> Img </div> 
+{% endblock %}
+
+{% block Component %}
+  <input-img id="ImgInput" />
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a button component.
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "language-html" %}
+  {% set code = '
+  <input-img id="ImgInput" />
+  <script>
+    const img_input = document.getElementById("ImgInput");
+    img_input.addEventListener("change", ()=>{
+      console.log(img_input.value);
+    });
+  </script>
+  ' %}
+  {% include "includes/components/example.njk" %}
+
+<script>
+  const img_input = document.getElementById("ImgInput");
+  img_input.addEventListener("change", ()=>{
+    console.log(img_input.value);
+  });
+</script>
+{% endblock %}

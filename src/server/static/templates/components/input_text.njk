@@ -1,0 +1,42 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Input </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div> Text </div> 
+{% endblock %}
+
+{% block Component %}
+  <div style="width:400px;">
+    <input-text id="TextInput" label="Text"/>
+  </div>
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a text input component.
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "language-html" %}
+  {% set code = '
+    <div style="width:400px;"><input-text label="Text"/></div>
+  <script>
+    const text_input = document.getElementById("TextInput");
+    text_input.addEventListener("keyup", (e)=>{
+      window.alert(e.currentTarget.value);
+    });
+  </script>
+  ' %}
+  {% include "includes/components/example.njk" %}
+
+<script>
+  const text_input = document.getElementById("TextInput");
+  text_input.addEventListener("keyup", (e)=>{
+    window.alert(e.currentTarget.value);
+  });
+</script>
+{% endblock %}

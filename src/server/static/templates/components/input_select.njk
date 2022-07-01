@@ -1,0 +1,50 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Input </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div> Select </div> 
+{% endblock %}
+
+{% block Component %}
+  <input-select id="SelectInput">
+    <div data-value="1">Type 1</div>
+    <div data-value="2">Type 2</div>
+    <div data-value="3">Type 3</div>
+    <div data-value="4">Type 4</div>
+  </input-select>
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a button component.
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "language-html" %}
+  {% set code = '
+  <input-select id="SelectInput">
+    <div data-value="1">Type 1</div>
+    <div data-value="2">Type 2</div>
+    <div data-value="3">Type 3</div>
+    <div data-value="4">Type 4</div>
+  </input-select>
+  <script>
+    const select_input = document.getElementById("SelectInput");
+    select_input.addEventListener("select", (e)=>{
+      window.alert(e.detail.value)
+    });
+  </script>
+  ' %}
+  {% include "includes/components/example.njk" %}
+
+<script>
+  const select_input = document.getElementById("SelectInput");
+  select_input.addEventListener("select", (e)=>{
+    window.alert(e.detail.value)
+  });
+</script>
+{% endblock %}

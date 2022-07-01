@@ -1,0 +1,56 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Button </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div> Button </div> 
+{% endblock %}
+
+{% block Component %}
+  <button-component id="ButtonExample" label="Click Me"></button-component>
+
+  <div style="margin-top:10px;">
+    <button-component color="red" label="Click Me"></button-component>
+  </div>
+  <div style="margin-top:10px;">
+    <button-component color="blue" label="Click Me"></button-component>
+  </div>
+  <div style="margin-top:10px;">
+    <button-component size="medium" label="Click Me"></button-component>
+  </div>
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a button component.
+  </div>
+{% endblock %}
+
+{% block Attributes %}
+  <div>
+    Attributes...
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "typescript" %}
+  {% set code = '
+  <button-component> id="ButtonExample" label="Click Me"><button-component>
+  <script>
+    const button = document.getElementById("ButtonExample");
+    button.addEventListener("click", ()=>{
+      window.alert("Clicked.");
+    });
+  </script>
+  ' %}
+  {% include "includes/components/example.njk" %}
+
+<script>
+  const button = document.getElementById("ButtonExample");
+  button.addEventListener("click", ()=>{
+    window.alert("Clicked.");
+  });
+</script>
+{% endblock %}

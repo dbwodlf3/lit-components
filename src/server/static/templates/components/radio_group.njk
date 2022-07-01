@@ -1,0 +1,46 @@
+{% extends "layout/content/component.njk" %}
+  
+{% block ComponentTitle1 %}
+  <div> Input </div> 
+{% endblock %}
+{% block ComponentTitle2 %}
+  <div> Radio Group </div> 
+{% endblock %}
+
+{% block Component %}
+  <radio-group id="RadioGroup">
+    <div data-value="A">A</div>
+    <div data-value="B">B</div>
+    <div data-value="C">C</div>
+    <div data-value="D">D</div>
+  </radio-group>
+{% endblock %}
+
+{% block ComponentDescription %}
+  <div>
+    This is a button component.
+  </div>
+{% endblock %}
+
+{% block ComponentExample %}
+  {% set filename = "index.html" %}
+  {% set language = "language-html" %}
+  {% set code = '
+  <button-component> id="ButtonExample" label="Click Me"><button-component>
+  <script>
+    const button = document.getElementById("ButtonExample");
+    console.log(button);
+    button.addEventListener("click", ()=>{
+      window.alert("Clicked.");
+    });
+  </script>
+  ' %}
+  {% include "includes/components/example.njk" %}
+
+<script>
+  const radio_group = document.getElementById("RadioGroup");
+  radio_group.addEventListener("select", ()=>{
+    window.alert(radio_group.value);
+  });
+</script>
+{% endblock %}
